@@ -1,0 +1,54 @@
+[debug] [2023-02-23T15:12:15.439Z] ----------------------------------------------------------------------
+[debug] [2023-02-23T15:12:15.440Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\mehme\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only functions
+[debug] [2023-02-23T15:12:15.440Z] CLI Version:   11.23.1
+[debug] [2023-02-23T15:12:15.441Z] Platform:      win32
+[debug] [2023-02-23T15:12:15.441Z] Node Version:  v16.18.0
+[debug] [2023-02-23T15:12:15.442Z] Time:          Thu Feb 23 2023 18:12:15 GMT+0300 (GMT+03:00)
+[debug] [2023-02-23T15:12:15.442Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-02-23T15:12:15.444Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2023-02-23T15:12:15.507Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-02-23T15:12:15.508Z] > authorizing via signed-in user (mehmetcanozcelik88@gmail.com)
+[debug] [2023-02-23T15:12:15.508Z] [iam] checking project socialapp-21e47 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2023-02-23T15:12:15.508Z] > refreshing access token with scopes: []
+[debug] [2023-02-23T15:12:15.509Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-02-23T15:12:15.509Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-02-23T15:12:17.737Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2023-02-23T15:12:17.737Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-02-23T15:12:17.737Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/socialapp-21e47:testIamPermissions [none]
+[debug] [2023-02-23T15:12:17.737Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/socialapp-21e47:testIamPermissions x-goog-quota-user=projects/socialapp-21e47
+[debug] [2023-02-23T15:12:17.738Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/socialapp-21e47:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2023-02-23T15:12:17.906Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2023-02-23T15:12:17.906Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2023-02-23T15:12:18.730Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/socialapp-21e47:testIamPermissions 401
+[debug] [2023-02-23T15:12:18.731Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/socialapp-21e47:testIamPermissions {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"ACCESS_TOKEN_TYPE_UNSUPPORTED","metadata":{"method":"google.cloudresourcemanager.v1.Projects.TestIamPermissions","service":"cloudresourcemanager.googleapis.com"}}]}}
+[debug] [2023-02-23T15:12:18.731Z] [iam] error while checking permissions, command may fail: FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2023-02-23T15:12:18.731Z] > refreshing access token with scopes: []
+[debug] [2023-02-23T15:12:18.731Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-02-23T15:12:18.732Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-02-23T15:12:18.938Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2023-02-23T15:12:18.939Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-02-23T15:12:18.939Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/socialapp-21e47/serviceAccounts/socialapp-21e47@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2023-02-23T15:12:18.939Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/socialapp-21e47/serviceAccounts/socialapp-21e47@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2023-02-23T15:12:19.852Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/socialapp-21e47/serviceAccounts/socialapp-21e47@appspot.gserviceaccount.com:testIamPermissions 401
+[debug] [2023-02-23T15:12:19.852Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/socialapp-21e47/serviceAccounts/socialapp-21e47@appspot.gserviceaccount.com:testIamPermissions {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"ACCESS_TOKEN_TYPE_UNSUPPORTED","metadata":{"method":"google.iam.admin.v1.IAM.TestIamPermissions","service":"iam.googleapis.com"}}]}}
+[debug] [2023-02-23T15:12:19.852Z] [functions] service account IAM check errored, deploy may fail:HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project. {"name":"FirebaseError","children":[],"context":{"body":{"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"ACCESS_TOKEN_TYPE_UNSUPPORTED","metadata":{"method":"google.iam.admin.v1.IAM.TestIamPermissions","service":"iam.googleapis.com"}}]}},"response":{"statusCode":401}},"exit":1,"message":"HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":401}
+[info] 
+[info] === Deploying to 'socialapp-21e47'...
+[info] 
+[info] i  deploying functions 
+[debug] [2023-02-23T15:12:19.855Z] > refreshing access token with scopes: []
+[debug] [2023-02-23T15:12:19.855Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-02-23T15:12:19.855Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-02-23T15:12:20.050Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2023-02-23T15:12:20.050Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-02-23T15:12:20.050Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/socialapp-21e47 [none]
+[debug] [2023-02-23T15:12:20.255Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/socialapp-21e47 401
+[debug] [2023-02-23T15:12:20.255Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/socialapp-21e47 {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED"}}
+[debug] [2023-02-23T15:12:20.255Z] HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2023-02-23T15:12:20.457Z] FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+    at responseToError (C:\Users\mehme\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:49:12)
+    at RetryOperation._fn (C:\Users\mehme\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:288:77)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[error] 
+[error] Error: Failed to get Firebase project socialapp-21e47. Please make sure the project exists and your account has permission to access it.
